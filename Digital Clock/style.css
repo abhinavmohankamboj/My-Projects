@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial,sans-serif;
+
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#0f2027,#203a43,#2c5364);;
+}
+.clock{
+    color:#fff;
+    font-size: 4rem;
+    background: rgba(0,0,0,0.3);
+    padding: 20px 40px;
+    border-radius: 12px;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse{
+    from{
+        transform: scale(1);
+        box-shadow: 0 0 10px #00eaff;
+    }
+    to{
+        transform: scale(1.05);
+        box-shadow: 0 0 25px #00eaff;
+    }
+}
+
+@media (max-width:600px){
+    .clock{
+        font-size: 2.5rem;
+        padding: 15px 25px;
+
+    }
+}
+.clock-container {
+    text-align: center;
+}
+
+.date {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size:1.2rem;
+    color: #d1faff;
+}
+@media(max-width:600px){
+    .date{
+        font-size: 1rem;
+    }
+}
