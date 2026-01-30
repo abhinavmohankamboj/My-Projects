@@ -1,2 +1,3 @@
 # My-Projects
-A collection of 5 front-end web projects built using HTML, CSS, and JavaScript to practice UI design, responsiveness, and core JavaScript functionality.
+A collection of 5 front-end web projects built using HTML, CSS, and JavaScript. These projects are designed to help practice UI design, responsiveness, and core JavaScript functionality. 
+I completed these projects with guidance and support, which helped me strengthen my skills and gain hands-on experience in creating interactive and visually appealing web interfaces. Each project focuses on practical implementation, clean code, and responsive design, making them perfect for learning and showcasing front-end development capabilities.
