@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.choices img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    padding: 20px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #d1d1d1, -8px -8px 16px #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.choices img:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 12px 12px 24px #bebebe, -12px -12px 24px #ffffff;
+    border-color: #667eea;
+}
+
+.choices img:active {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 4px 4px 8px #d1d1d1, -4px -4px 8px #ffffff;
+}
+
+#result {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    box-shadow: inset 4px 4px 8px #d1d1d1, inset -4px -4px 8px #ffffff;
+    color: #333;
+    animation: fadeIn 0.5s ease-out;
+}
+
+#result.win {
+    color: #10b981;
+    animation: bounce 0.6s ease;
+}
+
+#result.lose {
+    color: #ef4444;
+    animation: shake 0.6s ease;
+}
+
+#result.tie {
+    color: #f59e0b;
+    animation: pulse 0.6s ease;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.score-item {
+    background: linear-gradient(145deg, #667eea, #764ba2);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+.score-item h3 {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.score-item p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .game-container {
+        padding: 20px;
+    }
+    
+    .choices img {
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+    }
+    
+    #result {
+        font-size: 1.3rem;
+        padding: 15px;
+    }
+    
+    .score-item p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .choices {
+        gap: 15px;
+    }
+    
+    .choices img {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+    
+    #result {
+        font-size: 1.1rem;
+    }
+}
